@@ -32,7 +32,16 @@
     <ClInclude Include="Replace\ReplaceInclude.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Find\FindSubstring.h">
+    <ClInclude Include="Process\ProcessIncludes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Load\IncludesResource.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Load\IncludeNotLoadedException.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Find\SubString.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
