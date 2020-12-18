@@ -11,6 +11,7 @@ class IncludesResource{
 public:
 	static void load(const std::string& include_path){
 		if(!is_loaded(include_path)){
+			std::cout << "Loading: " + include_path << std::endl;
 			const std::shared_ptr<ILoadString> string_loader = std::make_shared<LoadFileToString>(include_path);
 			m_includes_cache[include_path] = string_loader->load();
 		}

@@ -44,5 +44,8 @@
     <ClInclude Include="Find\SubString.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Load\IndexOutsideRangeException.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

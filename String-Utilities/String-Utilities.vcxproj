@@ -146,6 +146,7 @@
     <ClInclude Include="Load\ILoadString.hpp" />
     <ClInclude Include="Load\IncludeNotLoadedException.hpp" />
     <ClInclude Include="Load\IncludesResource.hpp" />
+    <ClInclude Include="Load\IndexOutsideRangeException.hpp" />
     <ClInclude Include="Load\LoadFileToString.hpp" />
     <ClInclude Include="Load\LoadFileToStringException.hpp" />
     <ClInclude Include="Process\ProcessIncludes.hpp" />

@@ -1,4 +1,5 @@
 #pragma once
+#include "../Load/IndexOutsideRangeException.hpp"
 #include <string>
 #include <vector>
 
@@ -23,8 +24,23 @@ public:
 	static size_t find_index(const std::string& search_string, const std::string& find_string, const size_t occurance) {
 
 		// Returns the 1st/2nd/3rd/etc index as defined by the user
-		std::vector<size_t> all_indices = find_all_starting_indices(search_string, find_string);
-		return all_indices.at(occurance - 1);
+		try {
+			std::vector<size_t> all_indices = find_all_starting_indices(search_string, find_string);
+			const size_t vector_index = occurance - 1;
+
+			if(vector_index + 1 > all_indices.size()){
+				std::cout << "Search Value: " + find_string << std::endl;
+				throw IndexOutsideRangeException(vector_index + 1, all_indices.size());
+			}
+			
+			return all_indices.at(vector_index);
+		}
+
+		catch (IndexOutsideRangeException& range_error){
+			std::cerr << range_error.what() << std::endl;
+			exit(1);
+		}
+				
 	}
 
 	
