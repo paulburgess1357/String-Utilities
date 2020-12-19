@@ -1,5 +1,5 @@
 #pragma once
-#include "LoadFileToString.hpp"
+#include "../Load/LoadFileToString.hpp"
 #include "IncludeNotLoadedException.hpp"
 #include <string>
 #include <unordered_map>

@@ -1,5 +1,5 @@
 #pragma once
-#include "SubString.hpp"
+#include "../SubString/SubString.hpp"
 #include "IncludesResource.hpp"
 #include <string>
 #include <vector>
