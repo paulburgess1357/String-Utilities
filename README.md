@@ -10,13 +10,13 @@ This String Utilities library provides an easy interface for common string funct
 
 ## Usage example
 
-#### Load file to string
+### Load file to string
 ```
 std::string loaded_file = StringUtil::LoadFileToString::load("C:/Users/paulb/Desktop/examples/cube_colored.glsl");
 ```
-  
-  
-#### Process Includes
+
+
+### Process Includes
 Use include directives in your glsl (or any other string) code:
 
 C++ Call:
@@ -56,10 +56,9 @@ void main() {
     fragment_color = vec4(cube_color, 1.0);
 }
 ```
-  
-  
-#### SubString
-Substring functions for finding and extracting string values:
+
+
+### SubString
 ```
 std::string search_string = "Lets find all the starting indices of the word: the!";
 std::string find_string = "the";
@@ -73,25 +72,25 @@ size_t second_index = StringUtil::SubString::find_index(search_string, find_stri
 // Extract the substring between 2 values (both values are inclusive):
 std::string btwn_string = StringUtil::SubString::find_string_btwn_indices(search_string, 5, 8); // find
 ```
-  
-  
-#### FileSystem:
-Simple file/folder functions:
+
+
+### FileSystem:
+File/folder parse functions:
 ```
 std::string path = "C:/Users/paulb/Desktop/examples/cube_colored.glsl";
 StringUtil::FilePath::get_filename(path);  // cube_colored.glsl
 StringUtil::FilePath::get_directory(path); // C:/users/paulb/Desktop/examples/
 StringUtil::FilePath::get_extension(path); // glsl
 ```
-  
-  
+
+
 ### Output:
 ```
 std::string output_string { "Hello World!" };
 StringUtil::WriteToFile::write(output_string, "C:/users/paulb/desktop/hello.txt");
 ```
-  
-  
+
+
 ## Release History
 
 * 0.0.1
