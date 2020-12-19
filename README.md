@@ -20,7 +20,7 @@ std::string loaded_file = StringUtil::LoadFileToString::load("C:/Users/paulb/Des
 
 
 ### Process Includes
-Use include directives in your glsl (or any other text) code:
+Use include directives in your glsl (or any other text) code.  Includes within include files will also be processed:
 
 C++ Call:
 ```
