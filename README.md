@@ -11,84 +11,84 @@ This String Utilities library provides an easy interface for common string funct
 ## Usage example
 
 ### Load File:
-    ```
-    std::string loaded_file = StringUtil::LoadFileToString::load("C:/Users/paulb/Desktop/cube_colored.glsl");
-    ```
+```
+std::string loaded_file = StringUtil::LoadFileToString::load("C:/Users/paulb/Desktop/cube_colored.glsl");
+```
 
 
 ### Process Includes
 Use include directives in your glsl (or any other text) code:
 
-    C++ Call:
-    ```
-    std::string loaded_shader = StringUtil::LoadFileToString::load("C:/Users/paulb/Desktop/cube_colored.glsl");
-    loaded_shader = StringUtil::ProcessIncludes::process(loaded_shader);
-    ```
-    Example shader:
-    ```
-    #version 330 core
-    #include "C:/users/paulb/desktop/examples/structs.glsl"
+C++ Call:
+```
+std::string loaded_shader = StringUtil::LoadFileToString::load("C:/Users/paulb/Desktop/cube_colored.glsl");
+loaded_shader = StringUtil::ProcessIncludes::process(loaded_shader);
+```
+Example shader:
+```
+#version 330 core
+#include "C:/users/paulb/desktop/examples/structs.glsl"
 
-    out vec4 fragment_color;
-    uniform vec3 cube_color;
+out vec4 fragment_color;
+uniform vec3 cube_color;
 
-    void main() {
-        fragment_color = vec4(cube_color, 1.0);
-    }
-    ```
-    Result:
-    ```
-    #version 330 core
-    struct DirectionalLight {
-        vec3 direction;
-    };
+void main() {
+    fragment_color = vec4(cube_color, 1.0);
+}
+```
+Result:
+```
+#version 330 core
+struct DirectionalLight {
+    vec3 direction;
+};
 
-    struct SceneLight {
-        vec3 ambient;
-        vec3 diffuse;
-        vec3 specular; 
-    };
+struct SceneLight {
+    vec3 ambient;
+    vec3 diffuse;
+    vec3 specular; 
+};
 
-    out vec4 fragment_color;
-    uniform vec3 cube_color;
+out vec4 fragment_color;
+uniform vec3 cube_color;
 
-    void main() {
-        fragment_color = vec4(cube_color, 1.0);
-    }
-    ```
+void main() {
+    fragment_color = vec4(cube_color, 1.0);
+}
+```
 
 
 ### SubString
-    ```
-    std::string search_string = "Lets find all the starting indices of the word: the!";
-    std::string find_string = "the";
+```
+std::string search_string = "Lets find all the starting indices of the word: the!";
+std::string find_string = "the";
 
-    // Find all starting indices:
-    std::vector<size_t> starting_indices = StringUtil::SubString::find_all_starting_indices(search_string, find_string); // 14, 38, 48	
+// Find all starting indices:
+std::vector<size_t> starting_indices = StringUtil::SubString::find_all_starting_indices(search_string, find_string); // 14, 38, 48	
 
-    // Find a specific index:
-    size_t second_index = StringUtil::SubString::find_index(search_string, find_string, 2); // 38
+// Find a specific index:
+size_t second_index = StringUtil::SubString::find_index(search_string, find_string, 2); // 38
 
-    // Extract the substring between 2 values (both values are inclusive):
-    std::string btwn_string = StringUtil::SubString::find_string_btwn_indices(search_string, 5, 8); // find
-    ```
+// Extract the substring between 2 values (both values are inclusive):
+std::string btwn_string = StringUtil::SubString::find_string_btwn_indices(search_string, 5, 8); // find
+```
 
 
 ### FileSystem:
 File/folder parse functions:
-    ```
-    std::string path = "C:/Users/paulb/Desktop/examples/cube_colored.glsl";
-    StringUtil::FilePath::get_filename(path);  // cube_colored.glsl
-    StringUtil::FilePath::get_directory(path); // C:/users/paulb/Desktop/examples/
-    StringUtil::FilePath::get_extension(path); // glsl
-    ```
+```
+std::string path = "C:/Users/paulb/Desktop/examples/cube_colored.glsl";
+StringUtil::FilePath::get_filename(path);  // cube_colored.glsl
+StringUtil::FilePath::get_directory(path); // C:/users/paulb/Desktop/examples/
+StringUtil::FilePath::get_extension(path); // glsl
+```
 
 
 ### Output:
-    ```
-    std::string output_string { "Hello World!" };
-    StringUtil::WriteToFile::write(output_string, "C:/users/paulb/desktop/hello.txt");
-    ```
+```
+std::string output_string { "Hello World!" };
+StringUtil::WriteToFile::write(output_string, "C:/users/paulb/desktop/hello.txt");
+```
 
 
 ## Release History
