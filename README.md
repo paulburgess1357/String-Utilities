@@ -12,7 +12,7 @@ This String Utilities library provides an easy interface for common string funct
 
 ### Load file to string
 ```
-std::string loaded_file = StringUtil::LoadFileToString::load("C:/Users/paulb/Desktop/examples/cube_colored.glsl");
+std::string loaded_file = StringUtil::LoadFileToString::load("C:/Users/paulb/Desktop/cube_colored.glsl");
 ```
 
 
@@ -21,7 +21,7 @@ Use include directives in your glsl (or any other string) code:
 
 C++ Call:
 ```
-std::string loaded_shader = StringUtil::LoadFileToString::load("C:/Users/paulb/Desktop/examples/cube_colored.glsl");
+std::string loaded_shader = StringUtil::LoadFileToString::load("C:/Users/paulb/Desktop/cube_colored.glsl");
 loaded_shader = StringUtil::ProcessIncludes::process(loaded_shader);
 ```
 Example shader:
