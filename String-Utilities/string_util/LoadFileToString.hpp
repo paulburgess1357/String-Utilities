@@ -5,14 +5,23 @@
 #include <sstream>
 #include <iostream>
 
-class LoadFileToString : public ILoadString{
+namespace StringUtil {
+
+	class LoadFileToString : public ILoadString {
 
 	public:
 		LoadFileToString(const std::string& file_path)
-			:m_filepath{ file_path }{
-			
+			:m_filepath{ file_path } {
+
 		}
-	
+
+		static std::string load(const std::string& file_path) {
+			const LoadFileToString string_loader{ file_path };
+			return string_loader.load();
+		}
+
+	private:
+
 		std::string load() const override {
 
 			std::stringstream ss;
@@ -34,7 +43,8 @@ class LoadFileToString : public ILoadString{
 			return ss.str();
 		}
 
-	private:
 		std::string m_filepath;
-		
-};
+
+	};
+
+} // namespace StringUtil

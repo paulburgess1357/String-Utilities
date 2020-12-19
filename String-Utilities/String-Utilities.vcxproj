@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -116,6 +117,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,15 +144,16 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Find\SubString.hpp" />
-    <ClInclude Include="Load\ILoadString.hpp" />
-    <ClInclude Include="Load\IncludeNotLoadedException.hpp" />
-    <ClInclude Include="Load\IncludesResource.hpp" />
-    <ClInclude Include="Load\IndexOutsideRangeException.hpp" />
-    <ClInclude Include="Load\LoadFileToString.hpp" />
-    <ClInclude Include="Load\LoadFileToStringException.hpp" />
-    <ClInclude Include="Process\ProcessIncludes.hpp" />
-    <ClInclude Include="Replace\ReplaceInclude.hpp" />
+    <ClInclude Include="string_util\FilePath.hpp" />
+    <ClInclude Include="string_util\SubString.hpp" />
+    <ClInclude Include="string_util\ILoadString.hpp" />
+    <ClInclude Include="string_util\IncludeNotLoadedException.hpp" />
+    <ClInclude Include="string_util\IncludesResource.hpp" />
+    <ClInclude Include="string_util\IndexOutsideRangeException.hpp" />
+    <ClInclude Include="string_util\LoadFileToString.hpp" />
+    <ClInclude Include="string_util\LoadFileToStringException.hpp" />
+    <ClInclude Include="string_util\ProcessIncludes.hpp" />
+    <ClInclude Include="string_util\WriteToFile.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
