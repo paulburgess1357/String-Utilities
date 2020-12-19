@@ -9,6 +9,9 @@ This String Utilities library provides an easy interface for common string funct
 - Copy the StringUtilities folder to wherever your include directory is located
 
 ## Usage example
+```
+#include "StringUtilities/StringUtilities.hpp"
+```
 
 ### Load File:
 ```
