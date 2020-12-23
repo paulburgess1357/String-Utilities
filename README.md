@@ -103,5 +103,6 @@ StringUtil::WriteToFile::write(output_string, "C:/users/paulb/desktop/hello.txt"
 
 Paul Burgess – paulburgess1357@gmail.com
 
-Distributed under the MIT license. See ``LICENSE`` for more information.
-https://github.com/paulburgess1357/String-Utilities/blob/master/LICENSE
+Distributed under the MIT license. See ``LICENSE`` for more information:
+
+[LICENSE](https://github.com/paulburgess1357/String-Utilities/blob/master/LICENSE)
